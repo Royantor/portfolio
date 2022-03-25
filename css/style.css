@@ -1,0 +1,458 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    cursor: url("../assets/img/cursor.png") 16 16, auto;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #EDE8E4;
+}
+video {
+    background-color: #EDE8E4;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+@font-face{
+    font-family: "MessapiaBold";
+    src: url("../assets/fonts/Messapia-Bold.woff");
+}
+
+@font-face{
+    font-family: "MaziusRegular";
+    src: url("../assets/fonts/MAZIUSREVIEW20.09-Regular.woff");
+}
+
+@font-face{
+    font-family: "MaziusItalic";
+    src: url("../assets/fonts/MAZIUSREVIEW20.09-Italic.woff");
+}
+
+@font-face{
+    font-family: "MaziusExtraItalic";
+    src: url("../assets/fonts/MAZIUSREVIEW20.09-Extraitalic.woff");
+}
+
+
+.animationLogo{
+    width: 100vw;
+    height: 100%;
+    min-height: 350px;
+    background-color: #EDE8E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;/*
+    animation: containerLogo 3.3s ease-in forwards;*/
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+
+@keyframes containerLogo{
+    90%{
+        opacity: 1;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+video{/*
+    animation: loadingLogo 3s ease-in forwards;*/
+}
+
+@keyframes loadingLogo{
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*dessous : le bleu*/
+.bluelight{
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 350px;
+    background-color: #EDE8E4;
+    background-image: radial-gradient(circle at var(--x) var(--y), #07ffde 0%, #07ffde 3%,  #07ffde 10%, #9198e500 50%);
+    top: 0;
+    position: absolute;
+}
+
+/*dessus : le vert*/
+.container{
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.paddingContainer {
+    padding: 33px 33px;
+}
+
+.gradientBg {
+    background-image: radial-gradient(circle at var(--x) var(--y), #07ffde 0%, #00ffbbb7 5%, #00ffbb1f 25%, #9198e500 35%);
+}
+
+.top{
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    transform: translate3d(20px, 0, 0);
+    opacity: 0;
+}
+.apparition .logo {
+    animation: textApparition 0.6s ease-in forwards;
+}
+
+.menu{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate3d(0, 20%, 0);
+    opacity: 0;
+}
+.apparition .menu {
+    animation: textApparition 0.6s ease-in forwards;
+}
+.itemMenu{
+    font-family: "MessapiaBold";
+    font-size: 10px;
+    text-align: right;
+}
+
+.transparent{
+    display: none;
+}
+
+.middle{
+    width: max-content;
+    padding-bottom: 14px;
+}
+
+.title{
+    text-align: center;
+}
+
+h1{
+    font-family: "MaziusRegular";
+    font-size: 60px;
+    font-weight: 100;
+    transform: translate3d(0, 30%, 0);
+    opacity: 0;
+}
+.apparition h1 {
+    animation: textApparition 0.7s ease-in forwards;
+}
+.text{
+    font-family: "MaziusRegular";
+    font-size: 15px;
+    font-weight: 100;
+    padding-bottom: 12px;
+    transform: translate3d(0, 40%, 0);
+    opacity: 0;
+}
+.apparition .text {
+    animation: textApparition 0.5s ease-in 0.2s forwards;
+}
+.adj{
+    font-family: "MessapiaBold";
+    font-size: 20px;
+    transform: translate3d(0, 80%, 0);
+    opacity: 0;
+}
+.apparition .adj {
+    animation: textApparition 0.4s ease-in 0.3s forwards;
+}
+.containerBtn{
+    padding-top: 17px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    transform: translate3d(-4%, 0, 0);
+    min-height: 70px;
+    opacity: 0;
+    transition: letter-spacing 0.5s ease;
+}
+.apparition .btn {
+    animation: textApparition 0.5s ease-in forwards;
+}
+.four {
+    animation-delay: 0.7s;
+}
+.btn:hover {
+    letter-spacing: 2px;
+}
+.apparition .four {
+    animation-delay: 0.7s;
+}
+
+.discover, .return{
+    font-family: "MessapiaBold";
+    font-size: 8px;
+    padding-right: 15px;
+}
+
+.discover {
+    padding-left: 80px;
+}
+
+.return {
+    padding-left: 20px;
+}
+
+.arrow, .arrowLeft {
+    height: 18px;
+}
+
+.arrowLeft {
+    transform: rotate(180deg);
+}
+
+.bottom{
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.toggleBubble{
+    font-family: "MaziusRegular";
+    font-size: 11px;
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+}
+.apparition .toggleBubble {
+    animation: textApparition 0.6s ease-in forwards;
+}
+@keyframes textApparition{
+    100%{
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.toggleBubble span{
+    font-family: "MessapiaBold";
+    font-size: 10px;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+.media{
+    font-family: "MessapiaBold";
+    font-size: 10px;
+    text-align: right;
+    animation-delay: 0.5s;
+    letter-spacing: 0;
+    transition: letter-spacing 0.6s;
+    transform: translate3d(20%, 0, 0);
+    opacity: 0;
+}
+.apparition .media {
+    animation: textApparition 0.6s ease-in forwards;
+}
+.first{
+    animation-delay: 0s;
+}
+
+.second{
+    animation-delay: 0.1s;
+}
+
+.secondSoon {
+    animation-delay: 0.1s;
+}
+
+.third{
+    animation-delay: 0.2s;
+}
+
+.thirdSoon {
+    animation-delay: 0.1s;
+}
+
+.media:hover{
+    letter-spacing: 2px;
+}
+
+@media (min-width: 768px) and (max-aspect-ratio: 1/1) {
+    
+    video{
+        width: 900px;
+    }
+    .top{
+        height: 133px;
+    }
+    .logo img { 
+        width:220px;
+    }
+    .itemMenu{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 110px;
+    }
+    .text{
+        font-size: 49px;
+        padding-bottom: 22px;
+    }
+    .adj{
+        font-size: 35px;
+    }
+    .containerBtn{
+        padding-top: 57px;
+    }
+    .btn{
+        justify-content: center;
+    }
+    .discover{
+        font-size: 18px;
+        padding-left: unset;
+    }
+    .arrow{
+        height: 35px;
+    }
+    .arrow img{
+        height: 35px;
+    }
+    .bottom{
+        height: 133px;
+    }
+    .toggleBubble{
+        font-size: 26px;
+    }
+    .toggleBubble span{
+        font-size: 25px;
+    }
+    .media{
+        font-size: 25px;
+    }
+    
+}
+
+
+/* PAGE SOON */
+
+
+.fullWidthContainer {
+    padding: 33px 0;
+}
+.horizontalPadding {
+    padding: 0 33px;
+}
+.fullMiddle {
+    width: 100%;
+    padding-bottom: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    font-size: 90px;
+    height: 330px;
+    opacity: 0;
+    animation: textApparition 0.6s ease-in forwards;
+
+}
+.effectElement {
+    /*position: absolute;*/
+    width: max-content;
+    font-family: "MaziusRegular";
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+.effectElement div {
+    position: absolute;
+    min-width: max-content;
+}
+.fullItem, .fullItem2 {
+    position: absolute;
+}
+.fullElements {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+}
+.comingElements {
+    bottom: 0;
+}
+.messapia {
+    font-family: "MessapiaBold";
+}
+.mazius {
+    font-family: "MaziusRegular";
+}
+.maziusItalic {
+    font-family: "MaziusItalic";
+}
+.maziusExtraItalic {
+    font-family: "MaziusExtraItalic";
+}
+
+.perso{
+    width: 50%;
+    height: 50%;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    animation: apparitionPerso 0.4s ease-in forwards;
+}
+
+@keyframes apparitionPerso{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
